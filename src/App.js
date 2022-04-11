@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
-import { loginActions } from "./redux/action";
+import { loginActions,logOutActions } from "./redux/action";
 
 function App() {
   const [phone, setPhone] = useState("");
@@ -19,6 +19,7 @@ function App() {
         }}
       />
       <button onClick={() => dispatch(loginActions(phone))}>Login</button>
+      <button onClick={() => dispatch(logOutActions(phone))}>Logout</button>
     </div>
   );
 }
